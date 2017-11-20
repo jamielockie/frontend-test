@@ -115,60 +115,60 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
     return (
       <Wrapper>
         <Helmet title="HomePage" />
-          {this.state.step < 6 ?
-            <CardContainer>
-              <CardTitle>
-                <h1>Step {this.state.step + 1}</h1>
-              </CardTitle>
+        {this.state.step < 6 ?
+          <CardContainer>
+            <CardTitle>
+              <h1>Step {this.state.step + 1}</h1>
+            </CardTitle>
 
-              <StepContent isVisible={this.state.step <= 0}>
-                <p>In the upper-right corner of any page, click <span>+</span>, and then click <span>New repository.</span></p>
-              </StepContent>
+            <StepContent isVisible={this.state.step <= 0}>
+              <p>In the upper-right corner of any page, click <span>+</span>, and then click <span>New repository.</span></p>
+            </StepContent>
 
-              <StepContent isVisible={this.state.step === 1}>
-                <p>Type a short, memorable name for your repository. For example, &#8220;hello-world&#8221;.</p>
-              </StepContent>
+            <StepContent isVisible={this.state.step === 1}>
+              <p>Type a short, memorable name for your repository. For example, &#8220;hello-world&#8221;.</p>
+            </StepContent>
 
-              <StepContent isVisible={this.state.step === 2}>
-                <p>Optionally, add a description of your repository. For example, &#8220;My first repository on GitHub&#8221;.</p>
-              </StepContent>
+            <StepContent isVisible={this.state.step === 2}>
+              <p>Optionally, add a description of your repository. For example, &#8220;My first repository on GitHub&#8221;.</p>
+            </StepContent>
 
-              <StepContent isVisible={this.state.step === 3}>
-                <p><span>Choose between creating a public or private repository.</span></p>
-                <ul>
-                  <li><span>Public</span> repositories are a great choice for getting started. They&#39;re visible to any user on GitHub, so you can benefit from a collaborative community.</li>
-                  <li><span>Private</span> repositories require a little more setup. They&#39;re only available to you, the repository owner, as well as any collaborators you choose to share with. See <a target="_blank" href="https://help.github.com/articles/github-s-billing-plans/">GitHub&#39;s billing plans.</a></li>
-                </ul>
-              </StepContent>
+            <StepContent isVisible={this.state.step === 3}>
+              <p><span>Choose between creating a public or private repository.</span></p>
+              <ul>
+                <li><span>Public</span> repositories are a great choice for getting started. They&#39;re visible to any user on GitHub, so you can benefit from a collaborative community.</li>
+                <li><span>Private</span> repositories require a little more setup. They&#39;re only available to you, the repository owner, as well as any collaborators you choose to share with. See <a target="_blank" href="https://help.github.com/articles/github-s-billing-plans/">GitHub&#39;s billing plans.</a></li>
+              </ul>
+            </StepContent>
 
-              <StepContent isVisible={this.state.step === 4}>
-                <p>Select <span>Initialize this repository with a README.</span></p>
-              </StepContent>
+            <StepContent isVisible={this.state.step === 4}>
+              <p>Select <span>Initialize this repository with a README.</span></p>
+            </StepContent>
 
-              <StepContent isVisible={this.state.step === 5}>
-                <p>Click <span>Create repository</span>.</p>
-              </StepContent>
+            <StepContent isVisible={this.state.step === 5}>
+              <p>Click <span>Create repository</span>.</p>
+            </StepContent>
 
-              <ButtonContainer>
-                <ButtonPrev onClick={this.handlePrevStep} disabled={this.state.step < 1}>
-                  Previous
-                </ButtonPrev>
+            <ButtonContainer>
+              <ButtonPrev onClick={this.handlePrevStep} disabled={this.state.step < 1}>
+                Previous
+              </ButtonPrev>
 
-                <Button onClick={this.handleNextStep}>
-                  Next
-                </Button>
-              </ButtonContainer>
-            </CardContainer>
+              <Button onClick={this.handleNextStep}>
+                Next
+              </Button>
+            </ButtonContainer>
+          </CardContainer>
           :
-            <div>
-              <CardTitle>
-                <h1>Congratulations!</h1>
-              </CardTitle>
+          <div>
+            <CardTitle>
+              <h1>Congratulations!</h1>
+            </CardTitle>
 
-              <StepContent isVisible={this.state.step === 6}>
-                <p>You&#39;ve successfully created your first repository, and initialized it with a README file.</p>
-              </StepContent>
-            </div>
+            <StepContent isVisible={this.state.step === 6}>
+              <p>You&#39;ve successfully created your first repository, and initialized it with a README file.</p>
+            </StepContent>
+          </div>
           }
       </Wrapper>
     );
